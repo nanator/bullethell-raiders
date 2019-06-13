@@ -19,6 +19,6 @@ public class GameManager : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); //man kann auch verschiedene level laden LoadScene("name")
+        SceneManager.LoadScene(0); //man kann auch verschiedene level laden LoadScene("name")
     }
 }
