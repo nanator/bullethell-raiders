@@ -8,8 +8,13 @@ public class Enemy : MonoBehaviour
     public float speed;
     public GameObject deathEffect;
     public float XmaxBound, XminBound, Ymaxbound, YminBound;
-   
-     public void TakeDamage(int damage)
+
+
+    private void Start()
+    {
+    }
+
+    public void TakeDamage(int damage)
     {
         health -= damage;
 

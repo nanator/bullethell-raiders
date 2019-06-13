@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         transform.Rotate(180, 0, 0, Space.World);
         rb.velocity = -transform.up * speed;
     }
