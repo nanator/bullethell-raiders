@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public int health = 100;
     public float XmaxBound, XminBound, Ymaxbound, YminBound;
+    public GameObject shield;
     void Start()
     {
         player = GetComponent<Transform>();
