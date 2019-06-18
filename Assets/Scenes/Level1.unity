@@ -524,6 +524,10 @@ MonoBehaviour:
   Ymaxbound: 4.3
   YminBound: -4.3
   shield: {fileID: 1710168703}
+  powerUps:
+  - {fileID: 5225410816124693743, guid: e14f32cbde78cb5498de98cfe35338dc, type: 3}
+  - {fileID: 1584916857, guid: cafc801b6d9ddf84c858e6b1e315613f, type: 3}
+  powerUpChance: 100
 --- !u!114 &555875219
 MonoBehaviour:
   m_ObjectHideFlags: 0

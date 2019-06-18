@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public int health;
     public float speed;
     public GameObject deathEffect;
+
     public float XmaxBound, XminBound, Ymaxbound, YminBound;
 
 
@@ -27,8 +28,12 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        
         Destroy(gameObject);
+        FindObjectOfType<PlayerController>().DropPowerUp(transform.position);
     }
+
+
     
 
 

@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     public int health = 100;
     public float XmaxBound, XminBound, Ymaxbound, YminBound;
     public GameObject shield;
+    public GameObject[] powerUps;
+    public int powerUpChance;
+
     void Start()
     {
         player = GetComponent<Transform>();
@@ -66,5 +69,12 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void DropPowerUp(Vector2 enemyPostition)
+    {
+        if(Random.Range(0, 100) < powerUpChance)
+        {
+            Instantiate(powerUps[Random.Range(0, powerUps.Length)], enemyPostition, new Quaternion(0,0,0,0));
+        }
+    }
 
 }
