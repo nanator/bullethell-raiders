@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     {
         int height = Screen.currentResolution.height;
         int width = Screen.currentResolution.width;
-        //Screen.SetResolution(768, 1024, true);
+        //Screen.SetResolution(1080, 1920, true);
         Screen.SetResolution(height, width, true);
     }
 
