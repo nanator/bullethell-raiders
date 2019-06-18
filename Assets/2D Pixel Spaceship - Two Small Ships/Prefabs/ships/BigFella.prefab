@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 4149557230986437944}
   - component: {fileID: 5996867889783369972}
   m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Untagged
+  m_Name: BigFella
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1441669325
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300072, guid: 8d18f6d2b73e89b4882fbf3bb5aedb4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -181,6 +181,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1973797488871700, guid: 48e06088b7e195f40898a828bd389ec3,
     type: 3}
   ready: 1
+  SoundClip: {fileID: 0}
+  SoundSource: {fileID: 0}
 --- !u!1 &5996867890893022141
 GameObject:
   m_ObjectHideFlags: 0

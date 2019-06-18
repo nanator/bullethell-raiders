@@ -391,18 +391,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.68, y: 0.71}
   m_EdgeRadius: 0
---- !u!114 &555875215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 555875213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d2215225312c65478488be7e8a947d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &555875216
 AudioSource:
   m_ObjectHideFlags: 0
@@ -527,7 +515,7 @@ MonoBehaviour:
   powerUps:
   - {fileID: 5225410816124693743, guid: e14f32cbde78cb5498de98cfe35338dc, type: 3}
   - {fileID: 1584916857, guid: cafc801b6d9ddf84c858e6b1e315613f, type: 3}
-  powerUpChance: 100
+  powerUpChance: 50
 --- !u!114 &555875219
 MonoBehaviour:
   m_ObjectHideFlags: 0

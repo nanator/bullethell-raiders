@@ -112,8 +112,8 @@ GameObject:
   - component: {fileID: 2347841182316546502}
   - component: {fileID: 2347841182316546501}
   m_Layer: 0
-  m_Name: ship1 Variant
-  m_TagString: Untagged
+  m_Name: straightDown
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

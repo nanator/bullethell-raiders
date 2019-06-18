@@ -21,6 +21,9 @@ public class EnemyBullet : MonoBehaviour
         {
             player.TakeDamage(damage);
         }
-        Destroy(gameObject);
+        if (!hitInfo.CompareTag("PowerUp") && !hitInfo.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

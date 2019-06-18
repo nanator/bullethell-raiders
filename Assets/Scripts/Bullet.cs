@@ -24,6 +24,10 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(damage);
             FindObjectOfType<Score>().score++;
         }
-        Destroy(gameObject);
+        if(!hitInfo.CompareTag("PowerUp"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
