@@ -19,22 +19,25 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
 
-        if(health <= 0)
+        if (health <= 0)
         {
             Die();
         }
     }
 
-    void Die()
+    public void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
-        
+
         Destroy(gameObject);
         FindObjectOfType<PlayerController>().DropPowerUp(transform.position);
     }
 
-
-    
-
-
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        if (hitInfo.gameObject.name == "BottomCollider")
+        {
+            Die();
+        }
+    }
 }

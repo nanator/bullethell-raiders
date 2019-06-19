@@ -24,7 +24,6 @@ public class SideToSide : Enemy
         {
             speed = -speed;
             
-            
         }
 
 

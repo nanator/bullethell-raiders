@@ -13,9 +13,14 @@ public class PlayerController : MonoBehaviour
     public GameObject shield;
     public GameObject[] powerUps;
     public int powerUpChance;
+    bool isAndroid = false;
 
     void Start()
     {
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            isAndroid = true;
+        }
         player = GetComponent<Transform>();
         
     }
@@ -66,6 +71,15 @@ public class PlayerController : MonoBehaviour
 
         player.position += Vector3.right * b * speed;
         player.position += Vector3.up * h * speed;
+
+        if(isAndroid == true)
+        {
+            Touch touch = Input.touches[0];
+            if (touch.phase == TouchPhase.Moved)
+            {
+                this.transform.Translate(touch.deltaPosition); 
+            }
+        }
 
     }
 

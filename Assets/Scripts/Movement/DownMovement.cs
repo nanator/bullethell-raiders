@@ -18,10 +18,7 @@ public class DownMovement : Enemy
     // Update is called once per frame
     void MoveEnemy()
     {
-    enemyPosition.position += Vector3.down * speed / 100;
-       if (enemyPosition.position.y < YminBound)
-        {
-            Destroy(gameObject);
-        }
+        enemyPosition.position += Vector3.down * speed / 100;
     }
+
 }

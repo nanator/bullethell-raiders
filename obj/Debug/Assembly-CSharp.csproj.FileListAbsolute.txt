@@ -280,3 +280,5 @@ C:\Users\Allan\Documents\Github\bullethell-raiders\obj\Debug\Assembly-CSharp.csp
 C:\Users\Allan\Documents\Github\bullethell-raiders\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Allan\Documents\Github\bullethell-raiders\obj\Debug\Assembly-CSharp.dll
 C:\Users\Allan\Documents\Github\bullethell-raiders\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Allan\Documents\Github\bullethell-raiders\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+C:\Users\Allan\Documents\Github\bullethell-raiders\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
