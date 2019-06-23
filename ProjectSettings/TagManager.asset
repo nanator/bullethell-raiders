@@ -59,3 +59,6 @@ TagManager:
   - name: foreground
     uniqueID: 87675087
     locked: 0
+  - name: PowerUp
+    uniqueID: 1971331793
+    locked: 0

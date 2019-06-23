@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public int powerUpChance;
     bool isAndroid = false;
 
+
     void Start()
     {
         if (Application.platform == RuntimePlatform.Android)
@@ -83,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void DropPowerUp(Vector2 enemyPostition)
+    public void DropPowerUp(Vector3 enemyPostition)
     {
         if(Random.Range(0, 100) < powerUpChance)
         {
