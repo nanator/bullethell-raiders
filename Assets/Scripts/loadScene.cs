@@ -12,4 +12,10 @@ public class loadScene : MonoBehaviour
         SceneManager.LoadScene(level);
     }
 
+    public void QuitGame()
+    {
+        Debug.Log("Quit!");
+        Application.Quit();
+    }
+
 }

@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private Transform player;
-    public float speed;
+    public Transform player;
+ 
+    public float speed = 20;
     public int health = 100;
     public float XmaxBound, XminBound, Ymaxbound, YminBound;
     public GameObject shield;
@@ -15,9 +16,15 @@ public class PlayerController : MonoBehaviour
     public int powerUpChance;
     bool isAndroid = false;
 
+    private Vector3 touchPosition;
+    private Rigidbody2D rb;
+    private Vector3 direction;
+
+
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         if (Application.platform == RuntimePlatform.Android)
         {
             isAndroid = true;
@@ -57,9 +64,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        //steuerung PC
         float b = Input.GetAxis("Horizontal");
         float h = Input.GetAxis("Vertical");
-        if (player.position.x < XminBound && b < 0)
+        if (player.position.x < XminBound && b < 0)  // check game boundaries
             b = 0;
         else if (player.position.x > XmaxBound && b > 0)
             b = 0;
@@ -68,23 +77,38 @@ public class PlayerController : MonoBehaviour
             h = 0;
         else if (player.position.y > Ymaxbound && h > 0)
             h = 0;
+         
 
+        Vector3 input = new Vector3(b,h,0) ;
 
-        player.position += Vector3.right * b * speed;
-        player.position += Vector3.up * h * speed;
+       // player.position += Vector3.right * b * speed ; //actual movement
+       // player.position += Vector3.up * h *speed ;
 
-        if(isAndroid == true)
+        input = Vector3.ClampMagnitude(input, 1); ;
+
+       player.position += input * speed;
+
+        if (isAndroid == true) // Steuerung Android
         {
-            Touch touch = Input.touches[0];
-            if (touch.phase == TouchPhase.Moved)
+            if (Input.touchCount > 0)
             {
-                this.transform.Translate(touch.deltaPosition); 
-            }
-        }
+                Touch touch = Input.GetTouch(0);
+                touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+                touchPosition.z = 0;
+                direction = (touchPosition - transform.position);
+                rb.velocity = new Vector2(direction.x, direction.y) * speed;
 
+                if (touch.phase == TouchPhase.Ended)
+                    rb.velocity = Vector2.zero;
+            }
+
+
+        }
     }
 
-    public void DropPowerUp(Vector3 enemyPostition)
+
+
+    public void DropPowerUp(Vector2 enemyPostition)
     {
         if(Random.Range(0, 100) < powerUpChance)
         {

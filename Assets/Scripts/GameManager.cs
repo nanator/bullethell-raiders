@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int height = Screen.currentResolution.height;
-        int width = Screen.currentResolution.width;
-        //Screen.SetResolution(1080, 1920, true);
-        Screen.SetResolution(height, width, true);
+        //int height = Screen.currentResolution.height;
+        //int width = Screen.currentResolution.width;
+        Screen.SetResolution(1080, 1920, true);
+        //Screen.SetResolution(height, width, true);
     }
 
     public void GameOver()
