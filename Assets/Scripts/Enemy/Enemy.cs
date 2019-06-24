@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+
         health -= damage;
 
         if (health <= 0)
@@ -45,6 +46,10 @@ public class Enemy : MonoBehaviour
         if (hitInfo.gameObject.name == "BottomCollider")
         {
             Die();
+        }
+        if(hitInfo.gameObject.name == "Shield")
+        {
+            Destroy(gameObject);
         }
     }
 }

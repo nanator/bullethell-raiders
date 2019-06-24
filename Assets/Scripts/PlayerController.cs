@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)//wenn man einen Gegner rammt sterben beide
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>();
+        
         if (enemy != null)
         {
             Destroy(enemy.gameObject); //funktioniert noch nicht
