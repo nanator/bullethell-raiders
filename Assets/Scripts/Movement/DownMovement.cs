@@ -19,13 +19,7 @@ public class DownMovement : Enemy
     void MoveEnemy()
     {
         enemyPosition.position += Vector3.down * speed / 100;
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.CompareTag("Border"))
-            {
-                Destroy(gameObject);
-            }
-        }
+
     }
 
 }

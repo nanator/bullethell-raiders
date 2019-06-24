@@ -11,9 +11,9 @@ public class SideAndDown : Enemy
      
     void Start()
     {
-        enemyPosition = GetComponent<Transform>();
+
         InvokeRepeating("MoveEnemy", 0f, 0.01f);
-       
+        enemyPosition = GetComponent<Transform>();
     }
 
     // Update is called once per frame
