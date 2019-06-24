@@ -11,8 +11,15 @@ public class Enemy : MonoBehaviour
     public float XmaxBound, XminBound, Ymaxbound, YminBound;
 
 
-    private void Start()
+    private void Update()
     {
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Border"))
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public void TakeDamage(int damage)

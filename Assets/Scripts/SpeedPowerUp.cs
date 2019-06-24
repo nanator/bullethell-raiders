@@ -24,6 +24,10 @@ public class SpeedPowerUp : MonoBehaviour
         {
             StartCoroutine(Pickup(other));
         }
+        if (other.CompareTag("Border"))
+        {
+            Destroy(gameObject);
+        }
 
         IEnumerator Pickup(Collider2D player)
         {

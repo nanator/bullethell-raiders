@@ -11,9 +11,9 @@ public class SideAndDown : Enemy
      
     void Start()
     {
-
-        InvokeRepeating("MoveEnemy", 0f, 0.01f);
         enemyPosition = GetComponent<Transform>();
+        InvokeRepeating("MoveEnemy", 0f, 0.01f);
+       
     }
 
     // Update is called once per frame
@@ -23,13 +23,10 @@ public class SideAndDown : Enemy
         if(enemyPosition.position.x < XminBound || enemyPosition.position.x > XmaxBound)
         {
             speed = -speed;
-            enemyPosition.position += Vector3.down * 0.5f;
+            enemyPosition.position += Vector3.down * 15.0f;
             
         }
-        if (enemyPosition.position.y < YminBound)
-        {
-            Destroy(gameObject);
-        }
+
 
     }
 }

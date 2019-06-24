@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1584916860}
   - component: {fileID: 1584916859}
   - component: {fileID: 1584916858}
+  - component: {fileID: 2737503982509719621}
   m_Layer: 0
   m_Name: shield
   m_TagString: PowerUp
@@ -112,3 +113,24 @@ MonoBehaviour:
   pickupEffect: {fileID: 4649475122587874390, guid: 44e48ab28ded1784d9a90759dccf1821,
     type: 3}
   speed: 200
+--- !u!50 &2737503982509719621
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584916857}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

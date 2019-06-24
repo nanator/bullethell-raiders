@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveMovement : MonoBehaviour
+public class WaveMovement : Enemy
 {
     // Start is called before the first f
+   
 
     [SerializeField]
     float moveSpeed = 5f;
@@ -30,13 +31,18 @@ public class WaveMovement : MonoBehaviour
     void Update()
     {
         move();
+
+
     }
 
     public void move()
     {
         pos += Vector3.down * Time.deltaTime * moveSpeed;
         transform.position = pos + transform.right * Mathf.Sin((Time.time - spawnTime) * frequency) * magnitude;
-    }
+
+  
+        }
+
 }
 
 
