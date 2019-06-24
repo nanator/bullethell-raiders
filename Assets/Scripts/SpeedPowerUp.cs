@@ -6,6 +6,7 @@ public class SpeedPowerUp : MonoBehaviour
 {
     private Transform powerUpPostion;
     public float speed;
+    public float boost = 10f;
     void Start()
     {
 
@@ -33,14 +34,14 @@ public class SpeedPowerUp : MonoBehaviour
         {
             Debug.Log("E");
             PlayerController stats = player.GetComponent<PlayerController>();
-            stats.speed += 0.2f;
+            stats.speed += boost;
 
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
 
             yield return new WaitForSeconds(3f);
 
-            stats.speed -= 0.2f;
+            stats.speed -= boost;
             Destroy(gameObject);
         }
     }

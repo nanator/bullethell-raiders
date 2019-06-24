@@ -313,6 +313,26 @@ PrefabInstance:
       propertyPath: triShoot
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2013485484071309978, guid: c6487bef52822454a91e51d1061ab5f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013485484071309927, guid: c6487bef52822454a91e51d1061ab5f3,
+        type: 3}
+      propertyPath: m_Radius
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013485484071309927, guid: c6487bef52822454a91e51d1061ab5f3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013485484071309926, guid: c6487bef52822454a91e51d1061ab5f3,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6487bef52822454a91e51d1061ab5f3, type: 3}
 --- !u!1 &529132857

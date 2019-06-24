@@ -30,6 +30,7 @@ public class ShieldPowerUp : MonoBehaviour
         {
             Destroy(gameObject);
         }
+      
 
         IEnumerator Pickup(Collider2D player)
         {
