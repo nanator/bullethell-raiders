@@ -218,6 +218,26 @@ PrefabInstance:
       propertyPath: powerUpChance
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 866152943, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 866152943, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 866152943, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 866152945, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}
+      propertyPath: m_Radius
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 866152945, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 866152944, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}

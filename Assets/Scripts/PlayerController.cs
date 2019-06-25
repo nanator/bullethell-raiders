@@ -43,23 +43,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity); //noch keine Todes Animation
         Destroy(gameObject);
         FindObjectOfType<GameManager>().GameOver();
     }
 
-    private void OnTriggerEnter2D(Collider2D hitInfo)//wenn man einen Gegner rammt sterben beide
+    /*private void OnTriggerEnter2D(Collider2D hitInfo)//wenn man einen Gegner rammt sterben beide
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         if (enemy != null)
         {
-            Destroy(enemy.gameObject); //funktioniert noch nicht
+            Debug.Log("Hit2");
+            enemy.Die();
             Die();
         }
-        
-    }
+
+
+    }*/
     
     // Update is called once per frame
     void Update()

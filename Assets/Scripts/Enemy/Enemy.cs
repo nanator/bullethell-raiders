@@ -10,22 +10,6 @@ public class Enemy : MonoBehaviour
 
     public float XmaxBound, XminBound, Ymaxbound, YminBound;
 
-
-    private void Update()
-    {
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.CompareTag("Border"))
-            {
-                Destroy(gameObject);
-            }
-            if(other.CompareTag("Shield"))
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
-
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -46,6 +30,18 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
+        PlayerController player = hitInfo.GetComponent<PlayerController>();
+        if (hitInfo.gameObject.name == "Shield")
+        {
+            
+            Die();
+        }
+        if(hitInfo.CompareTag("Player"))
+        {
+            
+            Die();
+            player.Die();
+        }
         if (hitInfo.gameObject.name == "BottomCollider")
         {
             Die();
