@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(0);
-            SceneManager.UnloadScene(1);
-            SceneManager.UnloadScene(2);
+            //SceneManager.UnloadScene(1);
+            //SceneManager.UnloadScene(2);
         }
     }
 

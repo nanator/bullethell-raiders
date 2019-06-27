@@ -9,8 +9,7 @@ public class EnemySpawner : MonoBehaviour
     float randX;
     Vector3 whereToSpawn;
     public float spawnRate = 2f;
-    float nextSpawn = 0.0f;
-    public float waitInSeconds = 1.0f;
+    float nextSpawn = 1.0f;
     public float startTime;
     public float spawnForSeconds = 5.0f;
 
@@ -23,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time > nextSpawn && Time.time > startTime + waitInSeconds)
+        if(Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
           //  randX = Random.Range(-8.4f, 8.4f);
@@ -31,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
             whereToSpawn = new Vector3(transform.position.x, transform.position.y,transform.position.z);
             Instantiate(enemy, whereToSpawn, Quaternion.identity);
         }
-        if(Time.time > spawnForSeconds + waitInSeconds)
+        if(Time.time > spawnForSeconds + startTime)
         {
             Destroy(this);
         }

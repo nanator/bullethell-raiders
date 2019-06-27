@@ -143,7 +143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 290362796294395417, guid: deeb3fd42f61143fd817647489ec5393, type: 3}
   spawnRate: 8
-  waitInSeconds: 9
   spawnForSeconds: 120
 --- !u!4 &90593685
 Transform:
@@ -390,7 +389,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2347841182316546504, guid: ac45da080a6964d6a95cb980396daac1, type: 3}
   spawnRate: 2
-  waitInSeconds: 1
   spawnForSeconds: 120
 --- !u!4 &817777675
 Transform:
@@ -741,7 +739,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 6530200712795783595, guid: 2726fc8f987a130988d6fcee3c3ceee8, type: 3}
   spawnRate: 0.5
-  waitInSeconds: 0
   startTime: 0
   spawnForSeconds: 8
 --- !u!4 &1399867430
@@ -1013,7 +1010,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2347841182316546504, guid: ac45da080a6964d6a95cb980396daac1, type: 3}
   spawnRate: 2
-  waitInSeconds: 20
   spawnForSeconds: 60
 --- !u!4 &1459126126
 Transform:
@@ -1331,7 +1327,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1241799096930008796, guid: 3b8868096b3a12919ae4c23ac2cf12bd, type: 3}
   spawnRate: 0.1
-  waitInSeconds: 10
   startTime: 0
   spawnForSeconds: 5
 --- !u!4 &1782184848
@@ -1452,7 +1447,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2347841182316546504, guid: ac45da080a6964d6a95cb980396daac1, type: 3}
   spawnRate: 2
-  waitInSeconds: 20
   spawnForSeconds: 60
 --- !u!4 &1929391363
 Transform:
@@ -1499,7 +1493,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1175100088723303203, guid: 51db07752801edfc9b6a9468e3115340, type: 3}
   spawnRate: 0.5
-  waitInSeconds: 0
   startTime: 0
   spawnForSeconds: 8
 --- !u!4 &2079057381
@@ -1547,7 +1540,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1241799096930008796, guid: 3b8868096b3a12919ae4c23ac2cf12bd, type: 3}
   spawnRate: 0.1
-  waitInSeconds: 10
   startTime: 0
   spawnForSeconds: 5
 --- !u!4 &2142885650
