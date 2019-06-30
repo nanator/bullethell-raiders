@@ -13,7 +13,8 @@ public class Score : MonoBehaviour
     void Update()
     {
         scoreText.text = score.ToString();
-        if (score == 100)
+        Debug.Log(Time.timeSinceLevelLoad);
+        if (Time.timeSinceLevelLoad > 120.0f)
         {
             FindObjectOfType<GameManager>().Won();
             

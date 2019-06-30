@@ -265,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   speed: 10
-  health: 200
+  health: 100
   XmaxBound: 300
   XminBound: -300
   Ymaxbound: 600
@@ -276,7 +276,7 @@ MonoBehaviour:
   - {fileID: 1584916857, guid: cafc801b6d9ddf84c858e6b1e315613f, type: 3}
   - {fileID: 4956197512959713908, guid: 433e7ec7297100e4d916a9e4c5fa9dcb, type: 3}
   - {fileID: 951548110699474285, guid: f9c417b394d49704095d4aecd5445784, type: 3}
-  powerUpChance: 10
+  powerUpChance: 5
 --- !u!114 &468257337
 MonoBehaviour:
   m_ObjectHideFlags: 0
