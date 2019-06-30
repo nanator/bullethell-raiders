@@ -9,7 +9,7 @@ public class Spawnermoving : Enemy
     float randX;
     Vector3 whereToSpawn;
     public float spawnRate = 2f;
-    float nextSpawn = 0.0f;
+    public float nextSpawn = 0.0f;
     public float waitInSeconds = 1.0f;
     private float startTime;
     public float spawnForSeconds = 5.0f;
@@ -17,7 +17,7 @@ public class Spawnermoving : Enemy
 
     void Start()
     {
-        startTime = Time.time;
+        startTime = Time.timeSinceLevelLoad;
         enemyPosition = GetComponent<Transform>();
 
 
@@ -27,7 +27,7 @@ public class Spawnermoving : Enemy
     void Update()
     {
 
-        if(Time.time > nextSpawn && Time.time > startTime + waitInSeconds)
+        if(Time.timeSinceLevelLoad > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
           //  randX = Random.Range(-8.4f, 8.4f);
@@ -37,7 +37,7 @@ public class Spawnermoving : Enemy
             MoveEnemy();
             
         }
-        if(Time.time > spawnForSeconds + waitInSeconds)
+        if(Time.timeSinceLevelLoad > spawnForSeconds + waitInSeconds)
         {
             Destroy(this);
         }
