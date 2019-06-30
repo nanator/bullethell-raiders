@@ -2618,7 +2618,8 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 2.3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 866152944, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}
 --- !u!1 &1924774930
 GameObject:
