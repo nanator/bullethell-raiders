@@ -2,46 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedPowerUp : MonoBehaviour
+public class SpeedPowerUp : PowerUp
 {
-    private Transform powerUpPostion;
-    public float speed;
-    void Start()
-    {
 
-        InvokeRepeating("MovePowerUp", 0f, 0.01f);
-        powerUpPostion = GetComponent<Transform>();
-    }
-    // Update is called once per frame
-    void MovePowerUp()
-    {
-        powerUpPostion.position += Vector3.down * speed / 100;
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
+    public float speedincrease;
 
-        if(other.CompareTag("Player"))
-        {
-            StartCoroutine(Pickup(other));
-        }
-        if (other.CompareTag("Border"))
-        {
-            Destroy(gameObject);
-        }
 
-        IEnumerator Pickup(Collider2D player)
+        public override IEnumerator Pickup(Collider2D player)
         {
             Debug.Log("E");
             PlayerController stats = player.GetComponent<PlayerController>();
-            stats.speed += 0.2f;
+            stats.speed += speedincrease;
 
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
 
             yield return new WaitForSeconds(3f);
 
-            stats.speed -= 0.2f;
+            stats.speed -= speedincrease;
             Destroy(gameObject);
         }
     }
-}

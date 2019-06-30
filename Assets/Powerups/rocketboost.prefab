@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
+  powerupspeed: 20
 --- !u!50 &1923225435785712745
 Rigidbody2D:
   serializedVersion: 4

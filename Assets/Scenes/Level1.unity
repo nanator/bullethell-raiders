@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 468257338, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}
       propertyPath: powerUpChance
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 866152943, guid: 4c0ec421e56304e47bd8acc600040fc3, type: 3}
       propertyPath: m_IsActive
